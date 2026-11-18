@@ -1,0 +1,102 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3efff;
+    margin: 0;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #66519b;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #333;
+}
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.informacion p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 400px;
+    margin: 25px auto;
+}
+
+.card {
+    height: 85px;
+    background-color: #8065bd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.volteada {
+    background-color: white;
+    color: #333;
+    border: 3px solid #8065bd;
+}
+
+.card.encontrada {
+    background-color: #b8e6c8;
+    color: #333;
+    cursor: default;
+}
+
+button {
+    background-color: #8065bd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66519b;
+}
+
+@media (max-width: 500px) {
+    .tablero {
+        max-width: 350px;
+        gap: 8px;
+    }
+
+    .card {
+        height: 70px;
+        font-size: 28px;
+    }
+}
